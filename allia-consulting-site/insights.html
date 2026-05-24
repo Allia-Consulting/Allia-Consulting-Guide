@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insights — Allia Consulting</title>
+<meta name="description" content="Publications, analyses et points de vue des consultants Allia sur l'IA agentique en entreprise. Stratégie, mise en œuvre, gouvernance, conduite du changement.">
+<link rel="stylesheet" href="colors_and_type.css">
+<link rel="stylesheet" href="_site.css">
+<link rel="icon" type="image/svg+xml" href="assets/symbol.svg">
+</head>
+<body>
+
+<style>
+  /* inline-svg logo display — mirrors old <img> swap behaviour */
+  .ac-logo svg { width: 28px; height: 28px; display: block; }
+  .ac-logo svg.light { display: block; }
+  .ac-logo svg.dark { display: none; }
+  .ac-nav.scrolled .ac-logo svg.light { display: none; }
+  .ac-nav.scrolled .ac-logo svg.dark { display: block; }
+  .footer-brand .lockup svg { width: 32px; height: 32px; display: block; opacity: 0.88; }
+  .hero .watermark svg, .cta-dark .watermark svg { width: 100%; height: 100%; display: block; }
+</style>
+
+<!-- Inline SVG sprite — symbols referenced by <use href="#..."> so no external file load. -->
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+  <defs>
+    <symbol id="allia-symbol-light" viewBox="0 0 240 240">
+      <circle cx="120" cy="120" r="90" fill="none" stroke="#85B7EB" stroke-width="20" opacity="0.55"></circle>
+      <path d="M 120 30 L 191.40 174.79 A 73.92 73.92 0 0 0 48.60 174.79 L 120 30 Z" fill="none" stroke="#B5D4F4" stroke-width="20" stroke-linejoin="round" stroke-linecap="round" opacity="0.78"></path>
+      <circle cx="120" cy="30" r="2.5" fill="none" stroke="#B5D4F4" stroke-width="20" opacity="0.38"></circle>
+      <circle cx="191.40" cy="174.79" r="2.5" fill="none" stroke="#B5D4F4" stroke-width="20" opacity="0.38"></circle>
+      <circle cx="48.60" cy="174.79" r="2.5" fill="none" stroke="#B5D4F4" stroke-width="20" opacity="0.38"></circle>
+    </symbol>
+    <symbol id="allia-symbol-dark" viewBox="0 0 240 240">
+      <circle cx="120" cy="120" r="90" fill="none" stroke="#378ADD" stroke-width="20" opacity="0.4"></circle>
+      <path d="M 120 30 L 191.40 174.79 A 73.92 73.92 0 0 0 48.60 174.79 L 120 30 Z" fill="none" stroke="#378ADD" stroke-width="20" stroke-linejoin="round" stroke-linecap="round" opacity="0.6"></path>
+      <circle cx="120" cy="30" r="2.5" fill="none" stroke="#378ADD" stroke-width="20" opacity="0.28"></circle>
+      <circle cx="191.40" cy="174.79" r="2.5" fill="none" stroke="#378ADD" stroke-width="20" opacity="0.28"></circle>
+      <circle cx="48.60" cy="174.79" r="2.5" fill="none" stroke="#378ADD" stroke-width="20" opacity="0.28"></circle>
+    </symbol>
+    <symbol id="allia-symbol-mono" viewBox="0 0 240 240">
+      <circle cx="120" cy="120" r="90" fill="none" stroke="#ffffff" stroke-width="20" opacity="1"></circle>
+      <path d="M 120 30 L 191.40 174.79 A 73.92 73.92 0 0 0 48.60 174.79 L 120 30 Z" fill="none" stroke="#ffffff" stroke-width="20" stroke-linejoin="round" stroke-linecap="round" opacity="1"></path>
+      <circle cx="120" cy="30" r="2.5" fill="none" stroke="#ffffff" stroke-width="20" opacity="1"></circle>
+      <circle cx="191.40" cy="174.79" r="2.5" fill="none" stroke="#ffffff" stroke-width="20" opacity="1"></circle>
+      <circle cx="48.60" cy="174.79" r="2.5" fill="none" stroke="#ffffff" stroke-width="20" opacity="1"></circle>
+    </symbol>
+  </defs>
+</svg>
+
+
+<nav class="ac-nav">
+  <a href="index.html" class="ac-logo">
+    <svg class="light" aria-hidden="true"><use href="#allia-symbol-light"></use></svg>
+    <svg class="dark"  aria-hidden="true"><use href="#allia-symbol-dark"></use></svg>
+    <span><span class="name">Allia</span><span class="role">Consulting</span></span>
+  </a>
+  <div class="ac-links">
+    <a class="ac-link" href="index.html">Accueil</a>
+    <a class="ac-link" href="notre-cabinet.html">Notre cabinet</a>
+    <a class="ac-link" href="nos-expertises.html">Nos expertises</a>
+    <a class="ac-link" href="cas-clients.html">Cas clients</a>
+    <a class="ac-link active" href="insights.html">Insights</a>
+  </div>
+  <div class="ac-right">
+    <div class="ac-lang">
+      <button class="active">FR</button>
+      <span class="sep">/</span>
+      <button>EN</button>
+    </div>
+    <a href="nous-contacter.html" class="ac-cta">Prendre contact <span class="arrow">→</span></a>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ════════ HERO compact ════════ -->
+<section class="hero hero-compact">
+  <div class="watermark"><svg aria-hidden="true"><use href="#allia-symbol-mono"></use></svg></div>
+  <div class="container">
+    <div class="shell">
+      <div class="head">
+        <div class="eyebrow">Insights</div>
+        <h1>Ce que nous pensons. Ce que nous observons. Sans langue de bois.</h1>
+        <hr>
+        <p class="sub">Nos consultants publient régulièrement des analyses sur les sujets que nous traitons quotidiennement. Pas de littérature commerciale — des points de vue documentés, étayés, parfois contre-intuitifs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ ARTICLES ════════ -->
+<section class="sec sec-white">
+  <div class="container">
+    <div class="tile-filters">
+      <a href="#" class="tile-filter active">Tous</a>
+      <a href="#" class="tile-filter">Stratégie IA</a>
+      <a href="#" class="tile-filter">Mise en œuvre</a>
+      <a href="#" class="tile-filter">Gouvernance</a>
+      <a href="#" class="tile-filter">Conduite du changement</a>
+      <a href="#" class="tile-filter">Organisation</a>
+    </div>
+
+    <div class="card-grid cols-3" style="margin-top: 0;">
+      <a href="#" class="tile" id="01">
+        <div class="tile-tag">Stratégie IA</div>
+        <h2 class="tile-title">Le pilote d'agent IA qui « réussit » et disparaît : pourquoi, et comment l'éviter.</h2>
+        <div class="tile-meta">14 mai 2026 · 6 min de lecture</div>
+      </a>
+      <a href="#" class="tile" id="02">
+        <div class="tile-tag">Organisation</div>
+        <h2 class="tile-title">10 développeurs ou 1 consultant avec ses agents IA : le calcul que personne ne fait.</h2>
+        <div class="tile-meta">02 mai 2026 · 8 min de lecture</div>
+      </a>
+      <a href="#" class="tile" id="03">
+        <div class="tile-tag">Gouvernance</div>
+        <h2 class="tile-title">Gouvernance des agents IA en entreprise : les trois erreurs que presque tout le monde commet.</h2>
+        <div class="tile-meta">22 avril 2026 · 5 min de lecture</div>
+      </a>
+      <a href="#" class="tile" id="04">
+        <div class="tile-tag">Mise en œuvre</div>
+        <h2 class="tile-title">Industrialiser un agent IA en six semaines : retour d'expérience terrain.</h2>
+        <div class="tile-meta">08 avril 2026 · 7 min de lecture</div>
+      </a>
+      <a href="#" class="tile" id="05">
+        <div class="tile-tag">Conduite du changement</div>
+        <h2 class="tile-title">Ce que les managers d'équipe pensent vraiment des agents IA — et personne n'écoute.</h2>
+        <div class="tile-meta">28 mars 2026 · 9 min de lecture</div>
+      </a>
+      <a href="#" class="tile" id="06">
+        <div class="tile-tag">Stratégie IA</div>
+        <h2 class="tile-title">IA générative vs IA agentique en fonctions support : où chacune crée de la valeur.</h2>
+        <div class="tile-meta">14 mars 2026 · 6 min de lecture</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ CTA ════════ -->
+<section class="sec sec-dark cta-dark">
+  <div class="watermark"><svg aria-hidden="true"><use href="#allia-symbol-mono"></use></svg></div>
+  <div class="container">
+    <div class="cta-content">
+      <div class="sec-eyebrow">Newsletter</div>
+      <h2>Recevez nos publications, mensuellement.</h2>
+      <hr class="amber-rule">
+      <p>Pas de pitch commercial, pas de webinar caché : nos analyses, transmises directement par les consultants qui les rédigent.</p>
+      <form class="ctas" style="gap: 8px;" onsubmit="event.preventDefault();">
+        <input type="email" placeholder="email@organisation.fr" required style="font-family: var(--font-body); font-size: 14px; padding: 14px 18px; border-radius: 6px; border: 0.5px solid rgba(255,255,255,0.30); background: rgba(255,255,255,0.06); color: #fff; min-width: 280px;">
+        <button type="submit" class="btn btn-primary">S'abonner</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FOOTER ════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="lockup">
+          <svg aria-hidden="true"><use href="#allia-symbol-mono"></use></svg>
+          <span class="name">Allia</span><span class="role">Consulting</span>
+        </div>
+        <p>Cabinet de conseil nativement IA agentique. Nous accompagnons les grandes organisations dans leurs transformations les plus complexes.</p>
+        <p class="small" style="font-family: var(--font-mono); font-size: 11px; color: rgba(255,255,255,0.45); margin: 0; letter-spacing: 0.04em;">contact@allia-consulting.com<br>Paris · Interventions Europe</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="notre-cabinet.html">Notre cabinet</a></li>
+          <li><a href="nos-expertises.html">Nos expertises</a></li>
+          <li><a href="cas-clients.html">Cas clients</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="nous-contacter.html">Nous contacter</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Expertises</h5>
+        <ul>
+          <li><a href="nos-expertises.html#strategie">Stratégie IA agentique</a></li>
+          <li><a href="nos-expertises.html#integration">Intégration métier</a></li>
+          <li><a href="nos-expertises.html#adoption">Adoption &amp; changement</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Suivez-nous</h5>
+        <ul>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Newsletter Insights</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Allia Consulting · Tous droits réservés</div>
+      <div>
+        <a href="#">Mentions légales</a>
+        <a href="#">Politique de confidentialité</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="_site.js"></script>
+</body>
+</html>
