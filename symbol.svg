@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <title>Allia Consulting — Symbole</title>
+  <circle cx="120" cy="120" r="90" fill="none" stroke="#378ADD" stroke-width="20" opacity="0.4"></circle>
+  <path d="M 120 30 L 191.40 174.79 A 73.92 73.92 0 0 0 48.60 174.79 L 120 30 Z" fill="none" stroke="#378ADD" stroke-width="20" stroke-linejoin="round" stroke-linecap="round" opacity="0.6"></path>
+  <circle cx="120" cy="30" r="2.5" fill="none" stroke="#378ADD" stroke-width="20" opacity="0.28"></circle>
+  <circle cx="191.40" cy="174.79" r="2.5" fill="none" stroke="#378ADD" stroke-width="20" opacity="0.28"></circle>
+  <circle cx="48.60" cy="174.79" r="2.5" fill="none" stroke="#378ADD" stroke-width="20" opacity="0.28"></circle>
+</svg>
