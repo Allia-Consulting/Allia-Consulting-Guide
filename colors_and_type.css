@@ -1,11 +1,20 @@
 /* ==================================================================
    ALLIA CONSULTING — colors_and_type.css
-   Single source of truth for color + type tokens.
-   Use the --allia-* base vars OR the semantic vars (--fg, --h1, etc).
+   Single source of truth for design tokens (color · type · spacing).
+
+   Direction "v2" : premium sombre, un seul accent teal, la lentille
+   comme signature géométrique. Le thème SOMBRE est l'identité par
+   défaut (data-theme="dark" sur <html>) ; le thème clair existe (toggle).
+
+   Deux couches :
+     1. --allia-*  → palette de marque brute (valeurs sources)
+     2. sémantique (--paper, --ink, --accent, --disp, …) → consommée
+        par les composants dans _site.css. Ne pas mettre de hex en dur
+        dans les composants : passer par ces variables.
    ================================================================== */
 
-/* Webfonts — Inter is bundled (variable font, opsz + wght axes).
-   DM Sans and JetBrains Mono still come from Google Fonts. */
+/* Webfonts — Inter est auto-hébergée (fichier variable, axes opsz + wght).
+   Bricolage Grotesque (display) et IBM Plex Mono (mono) viennent de Google Fonts. */
 @font-face {
   font-family: 'Inter';
   src: url('fonts/Inter-VariableFont_opsz_wght.ttf') format('truetype-variations'),
@@ -14,235 +23,89 @@
   font-style: normal;
   font-display: swap;
 }
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
 
   /* ──────────────────────────────────────────────────────────────
-     COLORS — Brand (institutional blue + amber signature)
+     COLORS — Brand (accent teal, la seule couleur vive)
   ────────────────────────────────────────────────────────────── */
-  --allia-navy:        #0C447C;   /* Hero, nav, primary CTA */
-  --allia-navy-hover:  #0A3A6A;   /* Press / hover for primary surfaces */
-  --allia-blue-deep:   #185FA5;   /* H1, active links */
-  --allia-blue:        #378ADD;   /* Symbol stroke, icons, interactions */
-  --allia-blue-light:  #85B7EB;   /* Hover light, fills on dark */
-  --allia-blue-pale:   #E6F1FB;   /* Info badges, light surfaces */
-  --allia-amber:       #EF9F27;   /* Signature rule, accent CTA */
-  --allia-amber-dark:  #854F0B;   /* Text on amber pale */
-  --allia-amber-pale:  #FAEEDA;   /* Amber surfaces & badges */
+  --allia-teal:         #008C80;   /* teal profond — accent sur fond clair */
+  --allia-teal-bright:  #16E6D2;   /* teal vif — accent sur fond sombre */
+  --allia-teal-soft:    rgba(0,140,128,.16);
+  --allia-teal-art:     #0fd6c4;   /* teal des artworks / glyphes data-URI */
 
   /* ──────────────────────────────────────────────────────────────
-     COLORS — Neutrals (warm, NOT cool grey)
+     COLORS — Neutrals sombres (identité)
   ────────────────────────────────────────────────────────────── */
-  --allia-ink:         #2C2C2A;   /* Charcoal — primary text */
-  --allia-ink-2:       #5F5E5A;   /* Secondary text */
-  --allia-ink-3:       #888780;   /* Placeholders, meta */
-  --allia-ink-4:       #B4B2A9;   /* Disabled text */
-  --allia-border:      #D3D1C7;   /* Hairlines, separators */
-  --allia-bg-warm:     #F1EFE8;   /* Ivory — alternated sections */
-  --allia-bg:          #FAFAF9;   /* Page background */
-  --allia-white:       #FFFFFF;   /* Card surface */
+  --allia-paper-dark:    #06070A;  /* fond de page */
+  --allia-paper-2-dark:  #0B0D11;  /* sections alternées */
+  --allia-paper-3-dark:  #080A0D;  /* bandes calmes (marquee, cap) */
+  --allia-surface-dark:  #0E1015;  /* cartes */
+  --allia-ink-dark:      #F6F7F8;  /* texte principal */
+  --allia-ink-soft-dark: #A2A8B4;  /* texte secondaire */
+  --allia-mute-dark:     #646A77;  /* meta, placeholders */
 
   /* ──────────────────────────────────────────────────────────────
-     SEMANTIC COLORS — prefer these in components
+     COLORS — Neutrals clairs (thème clair via toggle)
   ────────────────────────────────────────────────────────────── */
-  --fg:          var(--allia-ink);
-  --fg-2:        var(--allia-ink-2);
-  --fg-3:        var(--allia-ink-3);
-  --fg-disabled: var(--allia-ink-4);
-  --fg-on-dark:  #FFFFFF;
-  --fg-on-dark-2:rgba(255,255,255,0.70);
-  --fg-on-dark-3:rgba(255,255,255,0.45);
-
-  --bg-page:     var(--allia-bg);
-  --bg-warm:     var(--allia-bg-warm);
-  --bg-card:     var(--allia-white);
-  --bg-dark:     var(--allia-navy);
-
-  --border:      var(--allia-border);
-  --border-dark: rgba(255,255,255,0.10);
-
-  --link:        var(--allia-blue-deep);
-  --link-hover:  var(--allia-navy);
-
-  --accent:      var(--allia-amber);          /* signature amber rule */
-  --accent-soft: var(--allia-amber-pale);
+  --allia-paper-light:    #FBFBFC;
+  --allia-paper-2-light:  #F2F3F5;
+  --allia-surface-light:  #FFFFFF;
+  --allia-ink-light:      #0B0D12;
+  --allia-ink-soft-light: #5A616E;
+  --allia-mute-light:     #9097A3;
 
   /* ──────────────────────────────────────────────────────────────
-     TYPOGRAPHY — base families
+     TYPOGRAPHY — familles
   ────────────────────────────────────────────────────────────── */
-  --font-display: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  --font-body:    'DM Sans', 'Helvetica Neue', Arial, sans-serif;
-  --font-mono:    'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
-
-  /* Sizes — DO NOT mix in arbitrary values */
-  --size-display: 3rem;        /* 48px — hero, can scale to 64px */
-  --size-h1:      2.25rem;     /* 36px */
-  --size-h2:      1.75rem;     /* 28px */
-  --size-h3:      1.375rem;    /* 22px */
-  --size-h4:      1.0625rem;   /* 17px */
-  --size-body-lg: 1.125rem;    /* 18px */
-  --size-body:    1rem;        /* 16px */
-  --size-sm:      0.875rem;    /* 14px */
-  --size-ui:      0.8125rem;   /* 13px — labels, button text */
-  --size-caption: 0.6875rem;   /* 11px — eyebrows, meta */
-
-  --weight-regular: 400;
-  --weight-medium:  500;
-  --weight-bold:    700;
-  --weight-black:   900;
-
-  --lh-tight:   1.05;          /* Display */
-  --lh-heading: 1.20;          /* H1–H3 */
-  --lh-snug:    1.40;
-  --lh-body:    1.70;          /* Body / paragraph */
-
-  --tracking-display: -0.03em; /* tighten on Display & H1 */
-  --tracking-heading: -0.01em;
-  --tracking-normal:  0;
-  --tracking-caption: 0.12em;  /* eyebrows, ALL CAPS labels */
-  --tracking-loose:   0.22em;  /* "consulting" lockup */
+  --allia-font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --allia-font-body:    "Inter", system-ui, sans-serif;
+  --allia-font-mono:    "IBM Plex Mono", ui-monospace, monospace;
 
   /* ──────────────────────────────────────────────────────────────
-     SPACING — base 4
+     SEMANTIC TOKENS — thème CLAIR par défaut (:root).
+     Le thème sombre (identité) est appliqué via html[data-theme="dark"].
   ────────────────────────────────────────────────────────────── */
-  --space-1:  4px;
-  --space-2:  8px;
-  --space-3:  12px;
-  --space-4:  16px;
-  --space-5:  24px;
-  --space-6:  32px;
-  --space-7:  48px;
-  --space-8:  64px;
-  --space-9:  96px;
-  --space-10: 128px;
+  --paper:#FBFBFC; --paper-2:#F2F3F5; --paper-3:var(--allia-paper-2-light); --surface:#FFFFFF;
+  --ink:#0B0D12; --ink-soft:#5A616E; --mute:#9097A3;
+  --line:rgba(11,13,18,0.10); --line-strong:rgba(11,13,18,0.18); --dot:rgba(11,13,20,.07);
 
-  /* ──────────────────────────────────────────────────────────────
-     RADII, BORDERS, SHADOWS
-  ────────────────────────────────────────────────────────────── */
-  --radius-sm:   4px;
-  --radius-md:   8px;
-  --radius-lg:   12px;
-  --radius-pill: 100px;
+  --p-main:var(--allia-teal); --p-bright:var(--allia-teal-bright); --p-soft:var(--allia-teal-soft);
+  --accent:var(--p-main); --accent-2:var(--p-bright); --accent-soft:var(--p-soft); --on-accent:#fff;
 
-  --border-thin:   0.5px;
-  --border-accent: 2.5px;     /* top accent on service cards */
-  --rule-w:        48px;      /* signature amber rule width */
-  --rule-h:        2px;
+  --invert-bg:#0B0D12; --invert-fg:#FBFBFC;
+  --header-bg:rgba(251,251,252,.72);
+  color-scheme:light;
 
-  /* Shadows are SPARSE — flat / hairline-first system.
-     Use sparingly: only on raised overlays / dropdowns. */
-  --shadow-sm: 0 1px 2px rgba(12, 68, 124, 0.06);
-  --shadow-md: 0 4px 16px rgba(12, 68, 124, 0.08);
-  --shadow-lg: 0 12px 32px rgba(12, 68, 124, 0.12);
+  /* type families (noms courts consommés par les composants) */
+  --disp:var(--allia-font-display);
+  --sans:var(--allia-font-body);
+  --mono:var(--allia-font-mono);
 
-  /* ──────────────────────────────────────────────────────────────
-     MOTION
-  ────────────────────────────────────────────────────────────── */
-  --transition-fast: 120ms ease;
-  --transition:      180ms ease;
-  --transition-slow: 300ms ease;
+  /* layout */
+  --maxw:1220px;
 }
 
 /* ──────────────────────────────────────────────────────────────────
-   SEMANTIC TYPOGRAPHY CLASSES — drop-in
+   THÈME SOMBRE — l'identité par défaut du site
 ────────────────────────────────────────────────────────────────── */
+html[data-theme="dark"]{
+  --paper:#06070A; --paper-2:#0B0D11; --paper-3:var(--allia-paper-3-dark); --surface:#0E1015;
+  --ink:#F6F7F8; --ink-soft:#A2A8B4; --mute:#646A77;
+  --line:rgba(255,255,255,0.08); --line-strong:rgba(255,255,255,0.15); --dot:rgba(237,238,242,.08);
 
-.t-eyebrow {
-  font-family: var(--font-display);
-  font-size: var(--size-caption);
-  font-weight: var(--weight-medium);
-  letter-spacing: var(--tracking-caption);
-  text-transform: uppercase;
-  color: var(--fg-3);
+  --accent:var(--p-bright); --accent-2:var(--p-main); --accent-soft:var(--p-soft); --on-accent:#0C0C10;
+  --invert-bg:#F7F8F8; --invert-fg:#08090B;
+  --header-bg:rgba(6,7,10,.6);
+  color-scheme:dark;
 }
 
-.t-display {
-  font-family: var(--font-display);
-  font-weight: var(--weight-black);
-  font-size: var(--size-display);
-  line-height: var(--lh-tight);
-  letter-spacing: var(--tracking-display);
-  color: var(--allia-navy);
+/* Thème clair explicite (identique aux valeurs :root — présent pour la clarté du toggle). */
+html[data-theme="light"]{
+  --paper:#FBFBFC; --paper-2:#F2F3F5; --surface:#FFFFFF;
+  --ink:#0B0D12; --ink-soft:#5A616E; --mute:#9097A3;
+  --line:rgba(11,13,18,0.10); --line-strong:rgba(11,13,18,0.18);
+  --invert-bg:#0B0D12; --invert-fg:#FBFBFC; --header-bg:rgba(251,251,252,.72);
+  color-scheme:light;
 }
-
-.t-h1 {
-  font-family: var(--font-display);
-  font-weight: var(--weight-bold);
-  font-size: var(--size-h1);
-  line-height: var(--lh-heading);
-  letter-spacing: var(--tracking-heading);
-  color: var(--allia-navy);
-}
-
-.t-h2 {
-  font-family: var(--font-display);
-  font-weight: var(--weight-bold);
-  font-size: var(--size-h2);
-  line-height: var(--lh-heading);
-  color: var(--fg);
-}
-
-.t-h3 {
-  font-family: var(--font-display);
-  font-weight: var(--weight-medium);
-  font-size: var(--size-h3);
-  line-height: 1.3;
-  color: var(--fg);
-}
-
-.t-body-lg {
-  font-family: var(--font-body);
-  font-size: var(--size-body-lg);
-  line-height: var(--lh-body);
-  color: var(--fg-2);
-}
-
-.t-body {
-  font-family: var(--font-body);
-  font-size: var(--size-body);
-  line-height: var(--lh-body);
-  color: var(--fg-2);
-}
-
-.t-sm {
-  font-family: var(--font-body);
-  font-size: var(--size-sm);
-  line-height: 1.6;
-  color: var(--fg-2);
-}
-
-.t-ui {
-  font-family: var(--font-display);
-  font-weight: var(--weight-medium);
-  font-size: var(--size-ui);
-  letter-spacing: 0.04em;
-  color: var(--fg);
-}
-
-.t-label {
-  font-family: var(--font-display);
-  font-weight: var(--weight-medium);
-  font-size: var(--size-ui);
-  letter-spacing: var(--tracking-caption);
-  text-transform: uppercase;
-  color: var(--fg-3);
-}
-
-.t-mono {
-  font-family: var(--font-mono);
-  font-size: var(--size-sm);
-  color: var(--fg-2);
-}
-
-/* The signature amber rule — used between an eyebrow and a title,
-   between a title and a body, or to terminate stat blocks. */
-.amber-rule {
-  display: block;
-  width: var(--rule-w);
-  height: var(--rule-h);
-  background: var(--accent);
-  border: none;
-  margin: var(--space-5) 0;
-}
-.amber-rule.center { margin-left: auto; margin-right: auto; }

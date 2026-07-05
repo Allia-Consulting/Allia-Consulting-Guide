@@ -1,384 +1,276 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Allia Consulting — Cabinet de conseil nativement IA agentique</title>
-<meta name="description" content="Allia Consulting accompagne les grandes organisations dans leurs transformations IA. Stratégie, intégration, adoption — conduites avec des systèmes d'agents IA au cœur de nos pratiques.">
+<title>Allia Consulting — L'alliance du conseil et de l'IA</title>
+<meta name="description" content="Cabinet de conseil nativement IA. Stratégie et transformation digitale IT / IA pour les grands groupes, les ETI et les PME — décider, concevoir, transformer, optimiser, sécuriser.">
+<meta property="og:title" content="Allia Consulting — L'alliance du conseil et de l'IA">
+<meta property="og:description" content="Cabinet de conseil nativement IA. Nos propres agents IA sont en production — nous nous appliquons ce que nous préconisons.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#06070A">
+<link rel="icon" type="image/svg+xml" href="assets/symbol.svg">
 <link rel="stylesheet" href="colors_and_type.css">
 <link rel="stylesheet" href="_site.css">
-<link rel="icon" type="image/svg+xml" href="assets/symbol.svg">
-
-<!-- Inline SVG symbols — referenced via <use> so we don't depend on external files at runtime. -->
-<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
-  <defs>
-    <!-- Symbole sur fond sombre (hero, watermarks) -->
-    <symbol id="allia-symbol-light" viewBox="0 0 240 240">
-      <circle cx="120" cy="120" r="90" fill="none" stroke="#85B7EB" stroke-width="20" opacity="0.55"></circle>
-      <path d="M 120 30 L 191.40 174.79 A 73.92 73.92 0 0 0 48.60 174.79 L 120 30 Z" fill="none" stroke="#B5D4F4" stroke-width="20" stroke-linejoin="round" stroke-linecap="round" opacity="0.78"></path>
-      <circle cx="120" cy="30" r="2.5" fill="none" stroke="#B5D4F4" stroke-width="20" opacity="0.38"></circle>
-      <circle cx="191.40" cy="174.79" r="2.5" fill="none" stroke="#B5D4F4" stroke-width="20" opacity="0.38"></circle>
-      <circle cx="48.60" cy="174.79" r="2.5" fill="none" stroke="#B5D4F4" stroke-width="20" opacity="0.38"></circle>
-    </symbol>
-    <!-- Symbole sur fond clair (nav après scroll) -->
-    <symbol id="allia-symbol-dark" viewBox="0 0 240 240">
-      <circle cx="120" cy="120" r="90" fill="none" stroke="#378ADD" stroke-width="20" opacity="0.4"></circle>
-      <path d="M 120 30 L 191.40 174.79 A 73.92 73.92 0 0 0 48.60 174.79 L 120 30 Z" fill="none" stroke="#378ADD" stroke-width="20" stroke-linejoin="round" stroke-linecap="round" opacity="0.6"></path>
-      <circle cx="120" cy="30" r="2.5" fill="none" stroke="#378ADD" stroke-width="20" opacity="0.28"></circle>
-      <circle cx="191.40" cy="174.79" r="2.5" fill="none" stroke="#378ADD" stroke-width="20" opacity="0.28"></circle>
-      <circle cx="48.60" cy="174.79" r="2.5" fill="none" stroke="#378ADD" stroke-width="20" opacity="0.28"></circle>
-    </symbol>
-    <!-- Symbole monochrome blanc (footer + watermarks sombres) -->
-    <symbol id="allia-symbol-mono" viewBox="0 0 240 240">
-      <circle cx="120" cy="120" r="90" fill="none" stroke="#ffffff" stroke-width="20" opacity="1"></circle>
-      <path d="M 120 30 L 191.40 174.79 A 73.92 73.92 0 0 0 48.60 174.79 L 120 30 Z" fill="none" stroke="#ffffff" stroke-width="20" stroke-linejoin="round" stroke-linecap="round" opacity="1"></path>
-      <circle cx="120" cy="30" r="2.5" fill="none" stroke="#ffffff" stroke-width="20" opacity="1"></circle>
-      <circle cx="191.40" cy="174.79" r="2.5" fill="none" stroke="#ffffff" stroke-width="20" opacity="1"></circle>
-      <circle cx="48.60" cy="174.79" r="2.5" fill="none" stroke="#ffffff" stroke-width="20" opacity="1"></circle>
-    </symbol>
-  </defs>
-</svg>
-
-<style>
-  /* ── Inline-svg logo display, with same swap behaviour as the old <img> ── */
-  .ac-logo svg { width: 28px; height: 28px; display: block; }
-  .ac-logo svg.light { display: block; }
-  .ac-logo svg.dark { display: none; }
-  .ac-nav.scrolled .ac-logo svg.light { display: none; }
-  .ac-nav.scrolled .ac-logo svg.dark { display: block; }
-  .footer-brand .lockup svg { width: 32px; height: 32px; display: block; opacity: 0.88; }
-  .hero .watermark svg, .cta-dark .watermark svg { width: 100%; height: 100%; display: block; }
-</style>
+<script>document.documentElement.setAttribute('data-theme','dark');</script>
 </head>
 <body>
 
-<!-- ════════ NAVIGATION ════════ -->
-<nav class="ac-nav">
-  <a href="index.html" class="ac-logo">
-    <svg class="light" aria-hidden="true"><use href="#allia-symbol-light"></use></svg>
-    <svg class="dark"  aria-hidden="true"><use href="#allia-symbol-dark"></use></svg>
-    <span><span class="name">Allia</span><span class="role">Consulting</span></span>
-  </a>
-  <div class="ac-links">
-    <a class="ac-link active" href="index.html">Accueil</a>
-    <a class="ac-link" href="notre-cabinet.html">Notre cabinet</a>
-    <a class="ac-link" href="nos-expertises.html">Nos expertises</a>
-    <a class="ac-link" href="cas-clients.html">Cas clients</a>
-    <a class="ac-link" href="insights.html">Insights</a>
-  </div>
-  <div class="ac-right">
-    <div class="ac-lang">
-      <button class="active">FR</button>
-      <span class="sep">/</span>
-      <button>EN</button>
+<!-- ════════ SYMBOLES INLINE — la lentille Allia, référencée via <use> ════════ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+  <defs><clipPath id="alSymLens"><circle cx="17" cy="14" r="11.5"/></clipPath></defs>
+  <!-- Marque adaptative (nav, contact) : traits en currentColor, lentille en --accent -->
+  <symbol id="allia-symbol" viewBox="0 0 46 28">
+    <circle cx="29" cy="14" r="11.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <circle cx="17" cy="14" r="11.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <circle cx="29" cy="14" r="11.5" fill="var(--accent)" clip-path="url(#alSymLens)"/>
+  </symbol>
+  <!-- Variante footer : lentille en --accent-2 sur fond inversé -->
+  <symbol id="allia-symbol-mono" viewBox="0 0 46 28">
+    <circle cx="29" cy="14" r="11.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <circle cx="17" cy="14" r="11.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <circle cx="29" cy="14" r="11.5" fill="var(--accent-2)" clip-path="url(#alSymLens)"/>
+  </symbol>
+</svg>
+
+<div class="lin-glow" aria-hidden="true"></div>
+
+<div class="sig" id="sig" aria-hidden="true"><svg viewBox="0 0 600 520" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="vesicaSig"><circle cx="360" cy="260" r="200"/></clipPath></defs><circle class="lens" cx="240" cy="260" r="200" clip-path="url(#vesicaSig)"/><circle class="ringline" cx="240" cy="260" r="200"/><circle class="ringline" cx="360" cy="260" r="200"/></svg></div>
+<div id="progress" aria-hidden="true"></div>
+<canvas id="bg" aria-hidden="true"></canvas>
+<span class="probe" id="probeAccent" style="color:var(--accent)"></span>
+<span class="probe" id="probeInk" style="color:var(--ink)"></span>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#" class="brand">
+      <svg class="mark alogo" id="navLogo" viewBox="0 0 46 28" aria-hidden="true"><use href="#allia-symbol"></use></svg>
+      <span>Allia&nbsp;<span class="wm-sub">Consulting</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#cabinet">Cabinet</a><a href="#expertises">Expertises</a><a href="#cas">Références</a><a href="#carrieres">Carrières</a>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeBtn" aria-label="Basculer entre mode clair et sombre" title="Mode clair / sombre">
+        <svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M22 12h-2.5M4.5 12H2M19 5l-1.8 1.8M6.8 17.2L5 19M19 19l-1.8-1.8M6.8 6.8L5 5"/></svg>
+      </button>
+      <a href="#contact" class="btn btn-primary">Contact</a>
+      <button class="menu-toggle" id="menuBtn" aria-label="Menu" aria-expanded="false">MENU</button>
     </div>
-    <a href="nous-contacter.html" class="ac-cta">Prendre contact <span class="arrow">→</span></a>
-    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
+</header>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Navigation mobile">
+  <a href="#cabinet">Cabinet</a>
+  <a href="#expertises">Expertises</a>
+  <a href="#cas">Références</a>
+  <a href="#carrieres">Carrières</a>
+  <a href="#contact" style="color:var(--accent)">Contact →</a>
 </nav>
 
-<!-- ════════ HERO ════════ -->
-<section
-  class="hero hero-full kenburns"
-  data-voile="lateral"
-  data-slideshow="true"
-  data-states='[
-    {"num":"01","lab":"Stratégie","cap":"— architecture · stratégie technologique · <b>Stratégie</b>"},
-    {"num":"02","lab":"Intégration","cap":"— boardroom · agents IA dans les métiers · <b>Intégration</b>"},
-    {"num":"03","lab":"Adoption","cap":"— terrain · conduite du changement · <b>Adoption</b>"}
-  ]'>
-
-  <div class="layer photos">
-    <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=2000&q=85&auto=format&fit=crop');"></div>
-    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1517502884422-41eaead166d4?w=2000&q=85&auto=format&fit=crop');"></div>
-    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1573497019418-b400bb3ab074?w=2000&q=85&auto=format&fit=crop');"></div>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-main">
+      <span class="eyebrow">Cabinet de conseil nativement IA</span>
+      <h1 style="margin-top:26px">L'alliance du <span class="accent">conseil</span><br>et de l'<span class="accent">IA</span>.</h1>
+      <p class="lede">Nous aidons les organisations, des PME aux grands groupes, à décider, concevoir et réussir leurs transformations, <strong style="color:var(--ink);font-weight:500;white-space:nowrap">à l'ère de l'IA</strong>.</p>
+      <div class="hero-cta" style="margin-top:40px;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="#expertises" class="btn btn-primary">Découvrir nos expertises</a>
+        <a href="#diagnostic" class="btn">Réserver 30 minutes avec un partner →</a>
+      </div>
+    </div>
+    <div class="hero-viz" aria-hidden="true">
+      <svg viewBox="0 0 460 280">
+        <defs><clipPath id="vheroL"><circle cx="165" cy="140" r="126"/></clipPath></defs>
+        <path class="wave" d="M 230 32.1 A 126 126 0 0 1 230 247.9 A 126 126 0 0 1 230 32.1 Z" fill="none" stroke="color-mix(in srgb,var(--accent) 45%,transparent)" stroke-width="1"/>
+        <path class="wave w2" d="M 230 32.1 A 126 126 0 0 1 230 247.9 A 126 126 0 0 1 230 32.1 Z" fill="none" stroke="color-mix(in srgb,var(--accent) 45%,transparent)" stroke-width="1"/>
+        <g class="gr"><circle class="lens" cx="295" cy="140" r="126" fill="var(--accent)" clip-path="url(#vheroL)" opacity="0.9"/></g>
+        <g class="gl"><circle cx="165" cy="140" r="126" fill="none" style="stroke:color-mix(in srgb,var(--ink) 52%,transparent)" stroke-width="1.5"/><text x="105" y="145" style="fill:color-mix(in srgb,var(--ink) 88%,transparent)" text-anchor="middle">ALLIANCE</text></g>
+        <g class="gr"><circle cx="295" cy="140" r="126" fill="none" stroke="var(--accent)" stroke-width="1.5"/><text x="358" y="145" fill="var(--accent)" text-anchor="middle">IA</text></g>
+        <text class="tA" x="230" y="145" fill="var(--on-accent)" text-anchor="middle" font-weight="600">ALLIA</text>
+      </svg>
+    </div>
   </div>
-  <div class="layer voile"></div>
-  <div class="layer grid-lines"></div>
+  <div class="scrollcue">Défiler vers le bas</div>
+</section>
 
-  <div class="container">
-    <div class="shell">
-      <div class="marker">
-        <span class="num">01</span>
-        <span class="bar"></span>
-        <span class="lab"><span class="lab-text">Stratégie</span><span>Cabinet de conseil nativement IA agentique</span></span>
+<section class="facts-band">
+  <div class="wrap">
+    <div class="facts reveal">
+      <div class="fact"><span class="fk">Nos clients</span><p>Nous intervenons auprès de PME, d'ETI et de grands groupes.</p></div>
+      <div class="fact"><span class="fk">Nos consultants</span><p>Des consultants avec de fortes expertises, issus des grands cabinets de conseil en management.</p></div>
+      <div class="fact"><span class="fk">Nos certifications</span><p>Notre cabinet cible les certifications Ecovadis et Cybervadis.</p></div>
+      <div class="fact"><span class="fk">Notre histoire</span><p>Née à l'ère de l'IA, optimisée par plus de 20 ans d'expérience dans le conseil.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Stratégie & feuille de route<i>◍</i>Transformation & IA<i>◍</i>Performance & Sécurité<i>◍</i></span>
+    <span>Stratégie & feuille de route<i>◍</i>Transformation & IA<i>◍</i>Performance & Sécurité<i>◍</i></span>
+  </div>
+</div>
+
+<section class="band" id="cabinet">
+  <div class="wrap">
+    <span class="gnum" aria-hidden="true">01</span>
+    <div class="sec-head reveal"><span class="eyebrow">L'alliance Allia</span><span class="sec-num">— l'ADN du cabinet</span></div>
+    <div class="conv">
+      <div class="eco-viz reveal" aria-hidden="true">
+        <svg viewBox="0 0 400 400" style="width:100%;height:auto;overflow:visible">
+          <path class="vcore" d="M 200 159.5 A 92 92 0 0 1 244 236.8 A 92 92 0 0 1 156 236.8 A 92 92 0 0 1 200 159.5 Z"></path>
+          <g data-eco="1" class="vg vg1" style="cursor:pointer">
+            <circle cx="200" cy="156" r="92" fill="transparent"></circle>
+            <text x="200" y="44" text-anchor="middle" class="vlbl">01 · Entreprise transformée</text>
+          </g>
+          <g data-eco="2" class="vg vg2" style="cursor:pointer">
+            <circle cx="152" cy="238" r="92" fill="transparent"></circle>
+            <text x="78" y="362" text-anchor="middle" class="vlbl">02 · Partenariat ouvert</text>
+          </g>
+          <g data-eco="3" class="vg vg3" style="cursor:pointer">
+            <circle cx="248" cy="238" r="92" fill="transparent"></circle>
+            <text x="322" y="362" text-anchor="middle" class="vlbl">03 · Consultant démultiplié</text>
+          </g>
+          <text x="200" y="206" text-anchor="middle" class="vcore-t">Votre</text>
+          <text x="200" y="222" text-anchor="middle" class="vcore-t">entreprise</text>
+        </svg>
       </div>
-
-      <div class="head">
-        <h1>
-          <span class="line">L'IA agentique n'est pas notre offre.</span>
-          <span class="line accent">C'est notre façon de travailler.</span>
-        </h1>
-        <hr>
-        <p class="sub">Allia accompagne les grandes organisations dans leurs transformations les plus complexes. Stratégie, intégration des agents IA dans les métiers, conduite du changement — menés avec des systèmes d'agents au cœur de nos pratiques. Pas seulement de nos slides.</p>
-        <div class="ctas">
-          <a href="notre-cabinet.html" class="btn btn-primary">Découvrir notre cabinet</a>
-          <a href="nous-contacter.html" class="btn btn-ghost">Prendre contact <span class="arrow">→</span></a>
+      <div class="reveal">
+        <h2>Une alliance augmentée, au service de <span class="accent">votre entreprise</span>.</h2>
+        <p>Avant de transformer votre entreprise, nous avons transformé la nôtre. Organisation, partenariats, consultants : tout Allia s'appuie sur l'IA, à votre service.</p>
+        <div class="stack">
+          <div data-eco="1"><span class="sn">01 · Entreprise transformée</span><ul class="sl"><li>Des agents déployés dans toute l'organisation Allia</li><li>Nos applications internes développées avec l'IA</li><li>L'IA au quotidien, pour chacun d'entre nous</li></ul><em class="stag">Nous nous appliquons ce que nous préconisons.</em></div>
+          <div data-eco="2"><span class="sn">02 · Partenariat ouvert</span><ul class="sl"><li>Un écosystème de partenaires technologiques et métiers</li><li>Publications, conférences et benchmarks ouverts</li><li>Un savoir mis à disposition de nos clients</li></ul><em class="stag">La connaissance circule avec nos clients.</em></div>
+          <div data-eco="3"><span class="sn">03 · Consultant démultiplié</span><ul class="sl"><li>Des agents et templates pour chaque mission</li><li>Des outils d'analyse prêts à l'emploi</li><li>Plus de temps consacré à votre terrain</li></ul><em class="stag">Un consultant, l'impact d'une équipe.</em></div>
         </div>
-      </div>
-
-      <aside class="side">
-        <div class="legend">— Nos expertises</div>
-        <div class="step active" data-i="0">
-          <span class="n">01</span>
-          <span class="t">Stratégie</span>
-          <span class="d">Vos ambitions IA méritent une feuille de route, pas un rapport.</span>
-        </div>
-        <div class="step" data-i="1">
-          <span class="n">02</span>
-          <span class="t">Intégration</span>
-          <span class="d">Les agents IA dans vos processus. Pas dans vos slides.</span>
-        </div>
-        <div class="step" data-i="2">
-          <span class="n">03</span>
-          <span class="t">Adoption</span>
-          <span class="d">La technologie ne transforme pas. Les équipes qui l'adoptent, oui.</span>
-        </div>
-      </aside>
-
-      <div class="foot">
-        <div class="caption">— architecture · stratégie technologique · <b>Stratégie</b></div>
-        <div class="dots">
-          <button class="dot active" data-i="0" aria-label="Slide 1"></button>
-          <button class="dot" data-i="1" aria-label="Slide 2"></button>
-          <button class="dot" data-i="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="counter"><b>01</b> / 03</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════════ NOTRE CONVICTION ════════ -->
-<section class="sec sec-white">
-  <div class="container">
-    <div class="sec-eyebrow">Notre conviction</div>
-    <h2 class="sec-title wide">Vaut-il mieux dix développeurs — ou un consultant avec les bons agents IA&nbsp;?</h2>
-    <hr class="amber-rule">
-
-    <div class="conviction-lockup">
-      <div class="ratio">
-        10<em>:</em>1
-        <span class="vs">— Notre réponse</span>
-        <span class="small">Un consultant. Augmenté.</span>
+<section class="band alt" id="expertises">
+  <div class="wrap">
+    <span class="gnum" aria-hidden="true">02</span>
+    <div class="sec-head reveal"><span class="eyebrow">Que proposons-nous ?</span><span class="sec-num">— nos expertises</span></div>
+    <h2 class="reveal" style="font-size:clamp(2rem,4vw,3.2rem);max-width:24ch;margin-bottom:18px">Trois expertises. Un même moteur : l'<span class="accent">IA</span>.</h2>
+    <p class="reveal" style="color:var(--ink-soft);max-width:64ch;margin-bottom:50px">La méthode est la même sur chacune de nos expertises : nos consultants travaillent avec nos agents IA. L'analyse va plus vite, et le temps gagné est réinvesti auprès de vos équipes.</p>
+    <div class="idx reveal">
+      <div class="idx-list" id="idxList">
+        <div class="idx-item active" data-k="0"><span class="idx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg></span><span class="xn">01</span><h3>Stratégie &amp; feuille de route</h3></div>
+        <div class="idx-item" data-k="1"><span class="idx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-15 6.7L3 16"></path><path d="M3 21v-5h5"></path></svg></span><span class="xn">02</span><h3>Transformation &amp; IA</h3></div>
+        <div class="idx-item" data-k="2"><span class="idx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span><span class="xn">03</span><h3>Performance &amp; Sécurité</h3></div>
       </div>
-      <div class="copy">
-        <p>L'IA agentique permet aujourd'hui à un consultant d'opérer avec la puissance de plusieurs collaborateurs traditionnels. Cette conviction structure chacune de nos missions et chaque choix technologique que nous proposons.</p>
-        <p><strong>Allia est né avec l'IA agentique, pas malgré elle.</strong> Nous n'avons pas reconverti une pratique de conseil : nous l'avons construite, dès le départ, autour de systèmes d'agents qui travaillent avec nos consultants — et donc pour vos équipes.</p>
-      </div>
+      <div class="idx-panel" id="idxPanel"></div>
     </div>
-
-    <div class="card-grid cols-3">
-      <div class="card">
-        <div class="card-eyebrow">01</div>
-        <h3 class="card-name">Nativement IA agentique</h3>
-        <p class="card-body">Nous n'enseignons pas ce que nous ne pratiquons pas. Des systèmes d'agents IA opèrent dans chacune de nos missions — vos conseils en bénéficient directement.</p>
-      </div>
-      <div class="card">
-        <div class="card-eyebrow">02</div>
-        <h3 class="card-name">Dispositifs resserrés</h3>
-        <p class="card-body">Des équipes plus petites, des missions plus véloces. Les agents IA amplifient chaque heure de travail. Vous payez l'impact, pas la masse.</p>
-      </div>
-      <div class="card">
-        <div class="card-eyebrow">03</div>
-        <h3 class="card-name">Spectre complet</h3>
-        <p class="card-body">De la stratégie IT à l'adoption par les équipes. Nous ne dissocions jamais la vision technologique de la réalité humaine qui la porte.</p>
-      </div>
-    </div>
+    <p class="discretion reveal">Un enjeu qui croise plusieurs expertises ? <a href="#contact" style="color:var(--accent)">Prendre contact →</a></p>
   </div>
 </section>
 
-<!-- ════════ NOS EXPERTISES (aperçu) ════════ -->
-<section class="sec sec-warm">
-  <div class="container">
-    <div class="sec-eyebrow">Nos expertises</div>
-    <h2 class="sec-title">Trois territoires. Indissociables.</h2>
-    <hr class="amber-rule">
-
-    <div class="card-grid cols-3">
-      <a href="nos-expertises.html#strategie" class="card is-link">
-        <div class="card-eyebrow">01 · Stratégie &amp; IT</div>
-        <h3 class="card-name">Stratégie IA agentique</h3>
-        <p class="card-body">Vos ambitions IA deviennent des décisions actionnables. Feuille de route, architecture d'agents, gouvernance.</p>
-        <span class="card-link">Explorer <span class="arrow">→</span></span>
-      </a>
-      <a href="nos-expertises.html#integration" class="card is-link">
-        <div class="card-eyebrow">02 · Intégration métier</div>
-        <h3 class="card-name">Intégration des agents IA dans les processus</h3>
-        <p class="card-body">Les agents IA dans vos processus, pas dans vos slides. Déploiement là où l'impact est mesurable.</p>
-        <span class="card-link">Explorer <span class="arrow">→</span></span>
-      </a>
-      <a href="nos-expertises.html#adoption" class="card is-link">
-        <div class="card-eyebrow">03 · Adoption &amp; changement</div>
-        <h3 class="card-name">Adoption &amp; conduite du changement</h3>
-        <p class="card-body">La technologie ne transforme pas. Les équipes qui s'approprient les agents IA, oui. Nous faisons en sorte que les vôtres y arrivent.</p>
-        <span class="card-link">Explorer <span class="arrow">→</span></span>
-      </a>
-    </div>
-
-    <a href="nos-expertises.html" class="sec-cta">Découvrir nos trois expertises <span class="arrow">→</span></a>
+<section class="cap-a">
+  <svg class="rings" viewBox="0 0 400 400" aria-hidden="true"><circle cx="165" cy="200" r="130" fill="none" stroke="var(--accent)" stroke-width="1"/><circle cx="235" cy="200" r="130" fill="none" stroke="var(--accent)" stroke-width="1"/></svg>
+  <div class="wrap" style="position:relative">
+    <span class="eyebrow reveal">Notre cap</span>
+    <blockquote class="reveal">« Donner aux organisations une longueur d'avance par l'innovation, et libérer le potentiel des <span class="accent">talents</span>. »</blockquote>
+    <p class="cap-sub reveal">Bâtir la référence du conseil à l'ère de l'IA, avec une conviction simple : la valeur d'un conseil se mesure aux résultats qu'il produit.</p>
   </div>
 </section>
 
-<!-- ════════ CAS CLIENTS (aperçu) ════════ -->
-<section class="sec sec-white">
-  <div class="container">
-    <div class="sec-eyebrow">Cas clients</div>
-    <h2 class="sec-title wide">Nos clients préfèrent la discrétion. Leurs résultats, eux, sont éloquents.</h2>
-    <hr class="amber-rule">
-    <p class="sec-intro">Trois transformations conduites avec Allia. Sans nom, mais avec tout le reste — secteur, contexte, défi, méthode, résultat chiffré.</p>
-
-    <div class="card-grid cols-3">
-      <a href="cas-clients.html#eti-finance" class="card is-link">
-        <div class="card-eyebrow">ETI industrielle · 1 200 salariés</div>
-        <h3 class="card-name">Une fonction finance manuelle multiplie par 3 sa capacité de traitement — sans recruter.</h3>
-        <div class="case-metric">
-          <span class="num">×3</span>
-          <span class="lab">capacité de traitement, à effectifs constants</span>
-        </div>
-        <span class="card-link">Lire le cas <span class="arrow">→</span></span>
-      </a>
-      <a href="cas-clients.html#banque-privee" class="card is-link">
-        <div class="card-eyebrow">Banque privée européenne</div>
-        <h3 class="card-name">L'intégration de l'IA générative dans la relation client haut de gamme — et la formation de 80 banquiers.</h3>
-        <div class="case-metric">
-          <span class="num">80</span>
-          <span class="lab">banquiers privés formés &amp; outillés en 14 semaines</span>
-        </div>
-        <span class="card-link">Lire le cas <span class="arrow">→</span></span>
-      </a>
-      <a href="cas-clients.html#distributeur" class="card is-link">
-        <div class="card-eyebrow">Distributeur national</div>
-        <h3 class="card-name">Refondre la chaîne logistique avec des agents IA, sans casser ce qui fonctionne déjà.</h3>
-        <div class="case-metric">
-          <span class="num">−22%</span>
-          <span class="lab">de ruptures sur les références pilotes, en 6 mois</span>
-        </div>
-        <span class="card-link">Lire le cas <span class="arrow">→</span></span>
-      </a>
+<section class="band alt" id="cas">
+  <div class="wrap">
+    <span class="gnum" aria-hidden="true">03</span>
+    <div class="sec-head reveal"><span class="eyebrow">Nos références</span><span class="sec-num">— alliances de long terme</span></div>
+    <h2 class="reveal" style="font-size:clamp(1.9rem,3.6vw,3rem);max-width:24ch;margin-bottom:18px">Des résultats mesurables, des alliances de <span class="accent">long terme</span> avec nos clients.</h2>
+    <p class="reveal" style="color:var(--ink-soft);max-width:62ch;margin-bottom:44px">Les résultats obtenus par nos équipes au fil de leurs parcours.</p>
+    <div class="mosaic reveal">
+      <div class="mcase heroC"><span class="ctx">Énergie · grand groupe</span><p>Feuille de route IA puis mise en œuvre : des agents IA conçus, déployés et adoptés par les équipes métiers, de la stratégie à la production.</p><span class="mnum"><b data-count="120">120</b></span><span class="ctx" style="color:var(--accent)">collaborateurs équipés d'agents IA</span></div>
+      <div class="mcase"><span class="ctx">Néo-banque · groupe télécom</span><p>Chantier IA du lancement d'une banque 100 % mobile.</p><span class="mnum"><b data-count="100000">100 000</b></span><span class="ctx">comptes en 4 mois</span></div>
+      <div class="mcase"><span class="ctx">Assurance · grand groupe</span><p>Plan d'optimisation financière de la filiale IT à 3 ans, environ 200 projets de production.</p><span class="mnum"><b data-count="40" data-suffix=" M€">40 M€</b></span><span class="ctx">optimisés sur 3 ans</span></div>
+      <div class="mcase"><span class="ctx">Environnement · grand groupe industriel</span><p>Migration ERP de bout en bout, 1 700 fonctionnalités.</p><span class="mnum"><b data-count="800">800</b></span><span class="ctx">collaborateurs embarqués</span></div>
+      <div class="mcase"><span class="ctx">Gestion de patrimoine · ETI</span><p>Transformation de l'organisation commerciale, à l'échelle du réseau.</p><span class="mnum"><b data-count="1100">1 100</b></span><span class="ctx">conseillers</span></div>
     </div>
-
-    <!-- Bande de discrétion : matérialiser la diversité sans nommer -->
-    <div class="discretion-strip">
-      <div class="label">Nos clients, sans les nommer</div>
-      <div class="row">
-        <span class="chip"><span class="dot"></span>CAC&nbsp;40 · Industrie</span>
-        <span class="chip"><span class="dot"></span>Banque privée</span>
-        <span class="chip"><span class="dot"></span>Asset management</span>
-        <span class="chip"><span class="dot"></span>ETI familiale</span>
-        <span class="chip"><span class="dot"></span>Distribution</span>
-        <span class="chip"><span class="dot"></span>Énergie</span>
-        <span class="chip"><span class="dot"></span>Secteur public</span>
-      </div>
-      <div class="foot">Discrétion par défaut — les noms n'apparaissent qu'avec l'accord écrit de nos clients, et jamais sur notre site.</div>
-    </div>
-
-    <a href="cas-clients.html" class="sec-cta">Tous nos cas clients <span class="arrow">→</span></a>
+    <span class="sectors-lbl reveal">Secteurs d'intervention</span>
+    <div class="sectors reveal"><span>Banque publique</span><span>Néo-banques</span><span>Assurance · Mutualiste</span><span>Asset management · Titres</span><span>Industrie · Énergie · Environnement</span><span>Retail · Distribution</span><span>Secteur public</span></div>
   </div>
 </section>
 
-<!-- ════════ INSIGHTS (aperçu) ════════ -->
-<section class="sec sec-warm">
-  <div class="container">
-    <div class="sec-eyebrow">Insights</div>
-    <h2 class="sec-title">Des points de vue, pas des études de cas.</h2>
-    <hr class="amber-rule">
-    <p class="sec-intro">Ce que nous observons sur le terrain, ce que nous pensons de l'IA en entreprise. Sans langue de bois. Signé par nos consultants.</p>
-
-    <div class="card-grid cols-3">
-      <a href="insights.html#01" class="tile">
-        <div class="tile-tag">Stratégie IA</div>
-        <h3 class="tile-title">Le pilote d'agent IA qui « réussit » et disparaît : pourquoi, et comment l'éviter.</h3>
-        <div class="tile-sig">
-          <span class="author">— Allia · Partner</span>
-          <span>6 min · Mai 2026</span>
-        </div>
-      </a>
-      <a href="insights.html#02" class="tile">
-        <div class="tile-tag">Organisation</div>
-        <h3 class="tile-title">10 développeurs ou 1 consultant avec ses agents IA : le calcul que personne ne fait.</h3>
-        <div class="tile-sig">
-          <span class="author">— Allia · Directeur</span>
-          <span>8 min · Avril 2026</span>
-        </div>
-      </a>
-      <a href="insights.html#03" class="tile">
-        <div class="tile-tag">Gouvernance</div>
-        <h3 class="tile-title">Gouvernance des agents IA en entreprise : les trois erreurs que presque tout le monde commet.</h3>
-        <div class="tile-sig">
-          <span class="author">— Allia · Partner</span>
-          <span>5 min · Avril 2026</span>
-        </div>
-      </a>
-    </div>
-
-    <a href="insights.html" class="sec-cta">Tous nos insights <span class="arrow">→</span></a>
-  </div>
-</section>
-
-<!-- ════════ CTA FINAL ════════ -->
-<section class="sec sec-dark cta-dark">
-  <div class="watermark"><svg aria-hidden="true"><use href="#allia-symbol-mono"></use></svg></div>
-  <div class="container">
-    <div class="cta-content">
-      <div class="sec-eyebrow">Commençons</div>
-      <h2>Présentez-nous vos enjeux, vos aspirations ou vos soucis.</h2>
-      <hr class="amber-rule">
-      <p>Nous sommes apporteurs de solutions, pas de propositions standard. Chaque réponse part de votre contexte réel — vos enjeux, vos contraintes, vos ambitions — pour construire ce qui transforme vraiment.</p>
-      <div class="ctas">
-        <a href="nous-contacter.html" class="btn btn-primary">Nous contacter</a>
-        <a href="cas-clients.html" class="btn btn-ghost">Découvrir nos cas clients <span class="arrow">→</span></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════ FOOTER ════════ -->
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="lockup">
-          <svg aria-hidden="true"><use href="#allia-symbol-mono"></use></svg>
-          <span class="name">Allia</span><span class="role">Consulting</span>
-        </div>
-        <p>Cabinet de conseil nativement IA agentique. Nous accompagnons les grandes organisations dans leurs transformations les plus complexes.</p>
-        <p class="small" style="font-family: var(--font-mono); font-size: 11px; color: rgba(255,255,255,0.45); margin: 0; letter-spacing: 0.04em;">contact@allia-consulting.com<br>Paris · Interventions Europe</p>
-      </div>
-      <div class="footer-col">
-        <h5>Navigation</h5>
-        <ul>
-          <li><a href="notre-cabinet.html">Notre cabinet</a></li>
-          <li><a href="nos-expertises.html">Nos expertises</a></li>
-          <li><a href="cas-clients.html">Cas clients</a></li>
-          <li><a href="insights.html">Insights</a></li>
-          <li><a href="nous-contacter.html">Nous contacter</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Expertises</h5>
-        <ul>
-          <li><a href="nos-expertises.html#strategie">Stratégie IA agentique</a></li>
-          <li><a href="nos-expertises.html#integration">Intégration métier</a></li>
-          <li><a href="nos-expertises.html#adoption">Adoption &amp; changement</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Suivez-nous</h5>
-        <ul>
-          <li><a href="#">LinkedIn</a></li>
-          <li><a href="#">Newsletter Insights</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div>© 2026 Allia Consulting · Tous droits réservés</div>
+<section class="band" id="diagnostic">
+  <div class="wrap">
+    <div class="diag30 reveal">
       <div>
-        <a href="#">Mentions légales</a>
-        <a href="#">Politique de confidentialité</a>
-        <a href="#">Cookies</a>
+        <span class="eyebrow">Diagnostic express</span>
+        <h2 style="margin-top:16px">30 minutes avec un partner. Une première lecture de votre enjeu.</h2>
+        <div class="dsteps">
+          <div><span class="n">01</span><p>Vous décrivez votre contexte et votre enjeu.</p></div>
+          <div><span class="n">02</span><p>Nous partageons une première lecture structurée, sans slides.</p></div>
+          <div><span class="n">03</span><p>Vous repartez avec 2 ou 3 pistes actionnables. Sans engagement.</p></div>
+        </div>
+      </div>
+      <div class="right">
+        <p>Un premier échange concret, directement avec un partner.</p>
+        <a href="mailto:contact@allia-consulting.com?subject=Diagnostic%20express%20%E2%80%94%2030%20minutes&body=Bonjour%2C%0A%0AJe%20souhaite%20r%C3%A9server%20un%20diagnostic%20express%20de%2030%20minutes.%0A%0AMon%20organisation%20%3A%20%0AMon%20enjeu%20en%20quelques%20lignes%20%3A%20%0AMes%20disponibilit%C3%A9s%20%3A%20" class="btn btn-primary">Réserver 30 minutes →</a>
+        <a href="#contact" class="slot">Ou décrivez-nous votre enjeu par écrit →</a>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="band" id="carrieres">
+  <div class="wrap">
+    <span class="gnum" aria-hidden="true">04</span>
+    <div class="manif reveal">
+      <span style="font-family:var(--mono);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;opacity:.7">Carrières — rejoindre Allia</span>
+      <h2 class="manif-title">Votre talent, démultiplié. Votre impact, récompensé.</h2>
+      <div class="mgrid">
+        <div><span class="mico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7z"></path></svg></span><b>Exigeant &amp; bienveillant</b><p>Des missions à fort enjeu, dans un cadre respectueux de chacun.</p></div>
+        <div><span class="mico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span><b>Mentoring sur mesure</b><p>Un accompagnement individuel par des consultants issus des grands cabinets.</p></div>
+        <div><span class="mico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M9 9h6v6H9zM9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"></path></svg></span><b>Outils &amp; formation IA</b><p>Équipement de qualité, meilleurs outils IA, formation continue.</p></div>
+        <div><span class="mico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"></path></svg></span><b>Valeur partagée</b><p>La valeur créée revient à celles et ceux qui la produisent. C'est le pacte du collectif.</p></div>
+      </div>
+      <a class="btnw" href="#contact">Rejoindre Allia →</a>
+    </div>
+  </div>
+</section>
+
+<section class="band contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="reveal">
+        <svg width="110" viewBox="0 0 46 28" aria-hidden="true" style="display:block;margin-bottom:26px"><use href="#allia-symbol"></use></svg>
+        <span class="eyebrow">Contact</span>
+        <h2 style="margin-top:24px">Présentez-nous vos enjeux, <em>ou rejoignez l'alliance.</em></h2>
+        <p>Nous vous répondons sous 48 heures, avec une première lecture de votre enjeu.</p>
+        <div class="cinfo">contact@allia-consulting.com<br>Paris · Interventions Europe</div>
+      </div>
+      <div class="form reveal" id="contactForm">
+        <input type="text" placeholder="Nom et prénom" aria-label="Nom" id="cfName">
+        <input type="email" placeholder="Email professionnel" aria-label="Email" id="cfMail">
+        <input type="text" placeholder="Organisation" aria-label="Organisation" id="cfOrg">
+        <textarea placeholder="Votre enjeu en quelques lignes…" aria-label="Message" id="cfMsg"></textarea>
+        <button type="button" class="btn btn-primary" id="cfSend">Envoyer →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <svg class="fwater" viewBox="0 0 400 400" aria-hidden="true"><defs><clipPath id="lensFw"><circle cx="230" cy="200" r="140"/></clipPath></defs><circle cx="230" cy="200" r="140" fill="color-mix(in srgb,var(--accent) 6%,transparent)" clip-path="url(#lensFw)"/><circle cx="170" cy="200" r="140" fill="none" style="stroke:color-mix(in srgb,var(--invert-fg) 9%,transparent)" stroke-width="1.2"/><circle cx="230" cy="200" r="140" fill="none" stroke="color-mix(in srgb,var(--accent) 20%,transparent)" stroke-width="1.2"/></svg>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="brand">
+          <svg class="mark" viewBox="0 0 46 28" aria-hidden="true"><use href="#allia-symbol-mono"></use></svg>
+          <span>Allia&nbsp;Consulting</span>
+        </div>
+        <p class="fabout">L'alliance du conseil et de l'IA. Cabinet de stratégie et de transformation auprès des PME, des ETI et des grands groupes.</p>
+        <div class="fcontact">contact@allia-consulting.com<br>Paris · Interventions Europe</div>
+      </div>
+      <div class="fcol"><h4>Cabinet</h4><a href="#cabinet">Qui sommes-nous</a><a href="#expertises">Expertises</a><a href="#cas">Références</a></div>
+      <div class="fcol"><h4>Expertises</h4><a href="#expertises">Stratégie &amp; feuille de route</a><a href="#expertises">Transformation &amp; IA</a><a href="#expertises">Performance &amp; Sécurité</a></div>
+      <div class="fcol"><h4>Suivez-nous</h4><a href="#">LinkedIn</a><a href="#carrieres">Carrières</a><a href="#contact">Contact</a></div>
+    </div>
+    <div class="fbottom"><span>© 2026 Allia Consulting · Tous droits réservés</span><span class="legal"><a href="#">Mentions légales</a><a href="#">Confidentialité</a><a href="#">Cookies</a></span></div>
   </div>
 </footer>
 
