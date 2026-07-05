@@ -3,61 +3,64 @@
 Site statique du cabinet Allia Consulting.
 Stack : **HTML + CSS + JS vanilla**. Aucun build, aucun framework, aucune dépendance externe.
 
+Direction visuelle **v2 (juillet 2026)** : premium **sombre**, un seul accent **teal**,
+la **lentille** (intersection de deux cercles) comme signature géométrique. Site **one-page**
+avec navigation par ancres. Le thème clair reste disponible via le bouton de bascule.
+
 ## Structure
 
 ```
 .
-├── index.html               Accueil
-├── notre-cabinet.html       Notre cabinet
-├── nos-expertises.html      Nos expertises
-├── cas-clients.html         Cas clients
-├── insights.html            Insights
-├── nous-contacter.html      Formulaire de contact
-├── _site.css                Stylesheet principale
-├── _site.js                 Script (slideshow hero, nav, etc.)
-├── colors_and_type.css      Tokens design system (couleurs, typo, espacements)
+├── index.html               Site one-page (Hero · Cabinet · Expertises · Références ·
+│                             Diagnostic · Carrières · Contact · Footer)
+├── _site.css                Styles composants & mise en page
+├── _site.js                 Script (nav, scrollspy, reveals, compteurs, index interactif,
+│                             écosystème, fond canvas, formulaire mailto, thème)
+├── colors_and_type.css      Tokens design system (couleurs, typo, espacements) — --allia-*
 ├── assets/
-│   ├── symbol.svg           Symbole Allia (bleu, fond clair)
-│   ├── symbol-light.svg     Symbole (bleu pâle, fond sombre)
-│   └── symbol-mono.svg      Symbole monochrome blanc (footer)
-└── fonts/
-    └── Inter-VariableFont_opsz_wght.ttf
+│   ├── symbol.svg           Symbole lentille (favicon)
+│   ├── symbol-light.svg     (backup — direction précédente)
+│   ├── symbol-mono.svg      (backup)
+│   └── lens-glyph.svg       (backup)
+├── fonts/
+│   └── Inter-VariableFont_opsz_wght.ttf
+└── _old/                    Archive : ancienne version multi-pages (bleu/ambre)
 ```
 
-> **Note** : les SVG des logos sont désormais **inlinés dans le HTML** via `<svg><use href="#allia-symbol-*">`. Les fichiers du dossier `assets/` ne servent plus qu'au **favicon** et restent en backup. Le site fonctionne donc même si `assets/` ne devait pas être servi par le serveur.
+> **Logos** : la lentille est **inlinée dans le HTML** via un sprite `<symbol id="allia-symbol-*">`
+> référencé par `<svg><use href="#allia-symbol-*"></use></svg>` (nav, contact, footer).
+> Les fichiers de `assets/` ne servent qu'au **favicon** et restent en backup.
+
+## Typographie
+
+- **Inter** — corps de texte, **auto-hébergée** (`fonts/`, fichier variable, via `@font-face`).
+- **Bricolage Grotesque** — titres / display, chargée depuis Google Fonts.
+- **IBM Plex Mono** — étiquettes, eyebrows, boutons, meta, chargée depuis Google Fonts.
 
 ## Déploiement
 
-### Hébergement statique simple (OVH, Netlify, Vercel, GitHub Pages…)
+Site 100 % statique, **tous les chemins sont relatifs** — pas de configuration serveur.
+La page d'entrée est `index.html`. Déposer le contenu du dossier à la racine du domaine
+(OVH, Netlify, Vercel, GitHub Pages, Azure Static Web Apps…).
 
-1. Uploade le contenu de ce dossier à la racine du domaine.
-2. La page d'entrée est `index.html`.
-3. Tous les chemins sont **relatifs** — pas de configuration serveur à prévoir.
-
-### GitHub Pages
+En local :
 
 ```bash
-git init
-git add .
-git commit -m "Allia Consulting — site v1"
-git branch -M main
-git remote add origin git@github.com:<org>/<repo>.git
-git push -u origin main
+python3 -m http.server 4321
+# puis http://localhost:4321
 ```
-
-Puis dans **Settings → Pages** :
-- Source : `Deploy from a branch`
-- Branch : `main` / `(root)`
 
 ## Maintenance
 
-- Tous les contenus textuels sont dans les fichiers `.html` (pas de CMS).
-- Les couleurs, typos et espacements se règlent dans `colors_and_type.css` (variables CSS `--allia-*`).
-- Pour ajouter une nouvelle page : copie un fichier existant, change `<title>`, `<meta description>` et le contenu principal. La nav et le footer sont à dupliquer manuellement.
+- Tous les contenus textuels sont dans `index.html` (pas de CMS).
+- Les couleurs, typos et espacements se règlent dans `colors_and_type.css` (variables `--allia-*`
+  pour la palette de marque, puis variables sémantiques `--paper`, `--ink`, `--accent`, `--disp`…).
+- Le site étant one-page, la nav et le footer n'existent qu'une fois (dans `index.html`).
+  Pour toute nouvelle page éventuelle : dupliquer manuellement la nav et le footer.
 
 ## Crédits
 
-- Typo : Inter (Google Fonts, OFL)
-- Photos hero : Unsplash (libres de droits, à remplacer par tes propres visuels à terme)
+- Typo : Inter, Bricolage Grotesque, IBM Plex Mono (OFL)
+- Aucune photo — l'iconographie est géométrique (lentille) + icônes monoline.
 
 © 2026 Allia Consulting
