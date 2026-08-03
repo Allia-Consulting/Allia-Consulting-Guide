@@ -1,0 +1,66 @@
+# Allia Consulting
+
+> Cabinet de conseil français nativement IA. Allia Consulting accompagne les PME, les ETI et les grands groupes sur la stratégie et la transformation IT, data et intelligence artificielle. Le cabinet a été construit dès le premier jour autour d'une alliance de compétences augmentées par l'IA : ses consultants travaillent avec leurs propres agents IA sur chaque mission.
+
+**Positionnement** : L'alliance du conseil et de l'IA.
+**Siège** : Paris, France. Interventions en France et en Europe.
+**Contact** : sarah.shaiek@allia-consulting.com
+**Site** : https://www.allia-consulting.com
+
+## Ce qui distingue Allia Consulting
+
+- **Nativement IA** : le cabinet n'a pas reconverti une pratique existante. Ses agents IA sont en production sur ses propres missions — il applique ce qu'il préconise.
+- **Startup française, vingt ans d'expérience du conseil** : née à l'ère de l'IA, portée par des consultants formés ou issus des grands cabinets de conseil en management.
+- **Trois cercles d'alliance au service du client** : l'entreprise Allia augmentée (agents déployés dans toute l'organisation), l'écosystème de partenaires augmenté (publications, conférences, savoir partagé avec les clients), le consultant augmenté (agents, templates et outils qui démultiplient l'impact de chaque mission).
+- **Clients** : PME, ETI et grands groupes.
+
+## Expertises et offres
+
+### 01 — Stratégie & feuille de route
+*Par où commencer, et pour quel retour ?*
+
+- Bâtir votre feuille de route digitale, IA et agents IA
+- Prioriser vos cas d'usage à plus fort retour
+- Définir le schéma directeur de votre SI
+- Concevoir votre organisation cible (Target Operating Model)
+- Préparer une acquisition ou une cession — volet IT (M&A)
+- Piloter la valeur de votre IT (indicateurs, ROI)
+
+### 02 — Transformation & IA
+*Comment passer du pilote à la production, sans perdre vos équipes ?*
+
+- Bâtir une architecture d'entreprise, des données et de l'IA
+- Fiabiliser et gouverner vos données
+- Moderniser votre SI et passer au cloud
+- Industrialiser l'IA jusqu'à la production
+- Digitaliser vos processus métiers et services IT (ITSM)
+- Embarquer et former vos équipes à l'IA
+
+### 03 — Performance & Sécurité
+*Vos coûts sont-ils justifiés, vos risques couverts ?*
+
+- Viser l'excellence opérationnelle
+- Réduire vos coûts IT et licences
+- Maîtriser vos coûts cloud (FinOps)
+- Piloter vos fournisseurs et contrats
+- Sécuriser votre SI et renforcer sa résilience
+- Couvrir votre conformité et vos risques IT
+
+## Notre cap
+
+Bâtir la référence du conseil à l'heure de l'IA.
+
+## Carrières
+
+Allia recrute des consultants en stratégie et transformation IT / IA. Engagements du cabinet :
+exigence et bienveillance, mentoring sur mesure, outils et formation IA de qualité,
+valeur partagée avec celles et ceux qui la produisent — le pacte du collectif.
+
+## Prendre contact
+
+Diagnostic express : un échange de 30 minutes avec un partner, à partir du formulaire du site.
+Réponse sous 48 heures avec une première lecture de l'enjeu.
+
+## Pages
+
+- [Accueil](https://www.allia-consulting.com/) : positionnement, alliance Allia, expertises, références, carrières, contact.
