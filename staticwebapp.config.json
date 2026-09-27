@@ -1,0 +1,7 @@
+{
+  "routes": [
+    { "route": "/site.html", "headers": { "X-Robots-Tag": "noindex, nofollow" } },
+    { "route": "/site", "headers": { "X-Robots-Tag": "noindex, nofollow" } },
+    { "route": "/llms.txt", "headers": { "X-Robots-Tag": "noindex" } }
+  ]
+}
